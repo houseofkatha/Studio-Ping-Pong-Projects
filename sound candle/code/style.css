@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+.text-container {
+  position: absolute;
+  width: 100%;
+  top: 15%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.happy {
+  font-family: "dejanire-text", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.subtext {
+  font-family: "dejanire-text", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.logos-set {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2.4%;
+}
+
+.logo-intro {
+  /* width: 7vw; */
+  width: 10vw;
+}
+
+.email-sens-container {
+  position: absolute;
+  right: 0%;
+  padding: 2.4%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: end;
+}
+
+.organiser {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+}
+
+.mail {
+  font-family: "DM Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+a {
+  font-family: "DM Mono";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: black;  
+  text-decoration: none;
+}
+
+.text-mono {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+.slider-container {
+  /* position: absolute; */
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  /* width: 105px; */
+}
+
+input {
+  /* position: absolute; */
+  appearance: none;
+  height: 3.6px;
+  top: 0;
+  background-color: white;
+  width: 113px;
+
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  /* border: 2px solid white; */
+  /* box-shadow: 0 0 2px rgba(0,0,0,0.3); */
+  /* margin-top: -7px; centers the thumb vertically on the track */
+}
+
+.sensitivity-text {
+  /* position: absolute; */
+  top: 0;
+  left: 150px;
+
+  font-family: "DM Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+.mic {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  font-family: "DM Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border: 1px solid black;
+}
+
+.mic:hover {
+  cursor: pointer;
+}
+
+.permission-button {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  /* padding-left: 16px;
+  padding-top: 16px; */
+  padding: 8px;
+  font-size: 32px;
+  background: transparent;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 60px;
+  /* Uncomment if you want a circle border: */
+  border: 1px solid #000;
+  border-radius: 50%;
+ 
+}
+
+@media (max-width: 600px) {
+
+  .text-container {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .happy {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .subtext {
+    
+    font-size: 1rem;
+    
+  }
+
+  /* .logos-set {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px;
+  } */
+
+  .logo-intro {
+    
+    width: 20vw;
+  }
+
+  
+
+  /* .email-sens-container {
+    position: absolute;
+    height: 100%;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 90px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 16px;
+    justify-content: space-between;
+  }
+
+  .slider-container {
+    scale: 0.8;
+  } */
+
+  /* a {
+    background-color: white;
+    text-align: center;
+    padding: 2px 6px;
+  }
+
+  .text-mono {
+    background-color: white;
+    padding: 2px 6px;
+    text-align: center;
+  } */
+}

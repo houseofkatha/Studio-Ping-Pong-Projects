@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://use.typekit.net/wai5tfl.css">
+    <script src="script.js" defer></script>
+    <title>Ping Pong Coming Soon</title>
+</head>
+<body>
+    <section class="intro">
+
+        <div class="logos-set">
+            <img class="logo" src="PP_Stacked logo.svg">
+            
+        </div>
+
+        <div class="coming-container">
+
+            <div class="coming-soon">
+                <div class="text-dejanire">www.studiopingpong.com<br>
+                launching on 6th July.</div>
+                <div class="text-dejanire">Till then speak ping pong to us.</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="typing">
+
+        <div class="master-container">
+
+            <div class="top">
+
+                <div class="head">
+                    <div class="logos-set">
+                        <img class="logo" src="PP_Stacked logo.svg">
+                        
+                    </div>
+
+                <div class="info-text" style="text-align: right;">
+                    <div class="text-mono"><a href="mailto:hello@studiopingpong.com" style="text-decoration: none; color: black;">
+                        HELLO@STUDIOPINGPONG.COM
+                        </a>
+                    </div>
+                    <div class="text-mono" id="countdown" style="font-family: 'DM Mono', monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;">00 DAYS TO GO!</div>
+                </div>
+                </div>
+
+                <div class="dash-dot">
+                    <div class="ping">
+                        <div class="dash"></div>
+                        <div class="text-mono">PING</div>
+                    </div>
+
+                    <div class="pong">
+                        <div class="dot"></div>
+                        <div class="text-mono">PONG</div>
+                    </div>
+                </div>
+
+                <div class="translated-block">
+                    <div class="text-degular-bold">OUR OFFICIAL LANGUAGE</div>
+                    <div class="output">......</div>
+                </div>
+
+            </div>
+
+            <div class="bottom">
+                <div class="text-degular-reg">speak ping pong to us.</div>
+                <input class="input" type="text" id="input" name="input" placeholder="You type,&#10; we decode">
+
+                <div class="clear">
+                    <div class="line"></div>
+                    <button class="click">CLEAR</button>
+                </div>
+
+                <button class="translate-b">Translate</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+      // Set the target date and time (IST)
+      const targetDate = new Date("2025-07-07T18:00:00+05:30");
+
+      function updateCountdown() {
+        const currentDate = new Date();
+        let timeDifference = targetDate - currentDate;
+
+        if (timeDifference < 0) {
+          // If the countdown is over, show zeros
+          document.getElementById("countdown").innerText = "00 DAYS TO GO!";
+          return;
+        }
+
+        // Calculate days, hours, minutes, and seconds
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        // Format numbers to two digits
+        const formattedDays = String(days).padStart(2, '0');
+        const formattedHours = String(hours).padStart(2, '0');
+        const formattedMinutes = String(minutes).padStart(2, '0');
+        const formattedSeconds = String(seconds).padStart(2, '0');
+
+        // Update the countdown display
+        document.getElementById("countdown").innerText = 
+          `${formattedDays} DAYS TO GO!`;
+      }
+
+      setInterval(updateCountdown, 1000);
+      updateCountdown(); // Initial call
+    </script>
+</body>
+
+</html>

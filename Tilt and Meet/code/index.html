@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js"></script>
+    
+    <link rel="stylesheet" href="https://use.typekit.net/wai5tfl.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        html, body {
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+        }
+        canvas {
+          display: block;
+          cursor: none !important;
+        }
+
+        .invisible-trigger {
+          position: absolute;
+          width: 100vw;
+          height: 100vh;
+          /* background-color: #000; */
+        }
+
+        .head-container {
+          position:absolute;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;  
+          align-items: start;
+          padding: 2.4%;
+          cursor: none;
+        }
+
+        .logo {
+          width: 10vw;
+          
+        }
+
+        .text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          justify-content: flex-end;
+          gap: 8px;
+          
+          font-family: "DM Mono", monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 0.9rem;
+        }
+
+        .start-text {
+          position: absolute;
+          text-align: center;
+          left: 50%;
+          top: 45%;
+          transform: translateX(-50%);
+          transform-origin: center;
+
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          font-family: "DM Mono", monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 0.9rem;
+        }
+
+        /* .permission-button {
+          position: absolute;
+          left: 50%;
+          bottom: 25%;
+          transform: translateX(-50%);
+          
+          padding: 8px;
+          font-size: 32px;
+          background: transparent;
+          color: #000;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          line-height: 60px;
+          
+          border: 1px solid #000;
+          border-radius: 50%;
+        
+        } */
+
+        .permission-button {
+          position: absolute;
+          width: 100vw;
+          height: 100vh;
+        
+        }
+
+        @media (max-width: 600px) {
+          .logo {
+            width: 20vw;
+          }
+          
+          .head-container {
+            padding: 3.8%;
+          }
+
+          
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="invisible-trigger"></div>
+    
+    <div class="head-container">
+      <img class="logo" src="PP_Stacked logo.svg">
+      
+      <div class="text">
+        <div class="email">
+          <a href="mailto:hello@studiopingpong.com" style="text-decoration: none; color: black;">
+            HELLO@STUDIOPINGPONG.COM
+          </a>
+        </div>
+        
+        <!-- Countdown timer will appear here -->
+        <div class="launching" id="countdown">
+          00 DAYS TO GO!
+        </div>
+      </div>
+    </div>
+
+    <div class="start-text" style="text-align: center;">
+      
+      CLICK ANYWHERE TO PLAY!
+      <b><i>TILT TO MAKE TWO MEET</i></b>
+
+    </div>
+    <!-- <div class="permission-button">
+      <svg width="72" height="72" viewBox="0 0 100 100">
+        <polygon points="35,25 75,50 35,75" 
+                fill="none" stroke="black" stroke-width="2" />
+      </svg> 
+    </div> -->
+
+    <div class="permission-button">
+      
+    </div>
+
+    <!-- <div class="permission-button">Tap to Start ▶</div> -->
+    
+    <script>
+      // Set the target date and time (IST)
+      const targetDate = new Date("2025-07-07T18:00:00+05:30");
+
+      function updateCountdown() {
+        const currentDate = new Date();
+        let timeDifference = targetDate - currentDate;
+
+        if (timeDifference < 0) {
+          // If the countdown is over, show zeros
+          document.getElementById("countdown").innerText = "00 DAYS TO GO!";
+          return;
+        }
+
+        // Calculate days, hours, minutes, and seconds
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        // Format numbers to two digits
+        const formattedDays = String(days).padStart(2, '0');
+        const formattedHours = String(hours).padStart(2, '0');
+        const formattedMinutes = String(minutes).padStart(2, '0');
+        const formattedSeconds = String(seconds).padStart(2, '0');
+
+        // Update the countdown display
+        document.getElementById("countdown").innerText = 
+          `${formattedDays} DAYS TO GO!`;
+      }
+
+      setInterval(updateCountdown, 1000);
+      updateCountdown(); // Initial call
+    </script>
+
+    <script src="sketch.js"></script>
+    
+  </body>
+</html>

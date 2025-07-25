@@ -1,0 +1,446 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+    background-color: #fffff3;
+    overflow: hidden;
+}
+
+.typing {
+    background-color: #fffff3;
+    /* height: 100%; */
+}
+
+
+.text-mono {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+.text-degular-bold {
+    font-family: "degular-mono", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+.text-degular-reg {
+    font-family: "degular-mono", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+.text-dejanire {
+    font-family: "dejanire-text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.intro {
+    height: 100vh;
+    background-color: #FFD60D;
+    padding: 3.3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.coming-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.coming-soon {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    /* padding-top: 80vh; */
+    font-size: 2rem;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.master-container {
+        padding: 2.3%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: space-between;
+        height: 100vh;
+        background-color: #fffff3;
+    }
+
+.top {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        /* width: 60%; */
+    }
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    height: 100%;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30vw;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 8px;
+    /* height: 100vh; */
+}
+
+.logos-set {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+.logo {
+    width: 10vw;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dash-dot {
+        display: flex;
+        flex-direction: row;
+        align-items: first baseline;
+        gap: 22px;
+    }
+
+.ping, .pong {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+.dash {
+        width: 50px;
+        height: 12px;
+        background-color: #FFD60D;
+    }
+
+.dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #FFD60D;
+    }
+
+.translated-block {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+.output {
+        font-family: dejanire-text, sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 0.9rem;
+    }
+
+.input {
+        border: none;
+        /* border-left: 1pt solid black; */
+        background-color: #fffff3;
+        height: 50px;
+        width: 100%;
+        padding: 6px;
+
+        font-family: "obviously-narrow", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+    }
+
+.clear {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 8px;
+        padding-top: 12px;
+    }
+
+.line {
+        height: 1px;
+        width: 100%;
+        background-color: black;
+    }
+
+.click {
+        background-color: #fffff3;
+        border: none;
+        font-family: "DM Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+    }
+
+input::placeholder {
+        font-family: "obviously-narrow", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+    }
+
+.translate-b {
+        border: none;
+        background-color: #fffff3;
+        border: 1px solid black;
+        padding: 9px 24px;
+        border-radius: 24px;
+        transition: 300ms;
+
+        font-family: dejanire-text, sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.2rem;
+    }
+
+.translate-b:hover {
+        border: none;
+        background-color: #FFD60D;
+        border: 1px solid #FFD60D;
+        padding: 9px 24px;
+        border-radius: 24px;
+        transition: 300ms;
+
+        font-family: dejanire-text, sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.2rem;
+        /* color: #ffffff; */
+    }
+
+@media (max-width: 600px) {
+
+    .intro {
+        height: 100vh;
+        background-color: #FFD60D;
+        padding: 8.3%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .logo-intro {
+        width: 30vw;
+    }
+
+    .coming-soon {
+        font-size: 1.4rem;
+        height: 60%;
+    }
+
+    .typing{
+        height: 100vh;
+        /* padding: 8.3%; */
+        /* box-sizing: border-box; */
+    }
+
+    .master-container {
+        padding: 8.3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* height: 100%; */
+        background-color: #fffff3;
+        margin-bottom: 8.3%;
+        height: 90vh;
+    }
+
+    
+
+    /* .text-mono {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.7rem;
+    }
+
+    .text-degular-bold {
+        font-family: "degular-mono", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 0.7rem;
+    }
+
+    .text-degular-reg {
+        font-family: "degular-mono", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        font-size: 0.7rem;
+    } */
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: last baseline;
+    }
+
+    .logos-set {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 20vw;
+    }
+
+
+    .dash-dot {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .ping, .pong {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .dash {
+        width: 50px;
+        height: 12px;
+        background-color: #FFD60D;
+    }
+
+    .dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #FFD60D;
+    }
+
+    .translated-block {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .output {
+        font-family: dejanire-text, sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1rem;
+    }
+
+    .input {
+        border: none;
+        /* border-left: 1pt solid black; */
+        background-color: #fffff3;
+        height: 50px;
+        width: 100%;
+        padding: 6px;
+        border-radius: 0%;
+
+        font-family: "obviously-narrow", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+    }
+
+    .clear {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 8px;
+        padding-top: 12px;
+        color: black;
+    }
+
+    .line {
+        height: 1px;
+        width: 100%;
+        background-color: black;
+    }
+
+    .click {
+        background-color: #fffff3;
+        border: none;
+        font-family: "DM Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+        color: black;
+    }
+
+    input::placeholder {
+        font-family: "obviously-narrow", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+    }
+
+    .translate-b {
+        border: none;
+        background-color: #fffff3;
+        border: 1px solid black;
+        padding: 9px 24px;
+        border-radius: 24px;
+        transition: 300ms;
+        color: black;
+
+        font-family: dejanire-text, sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.5rem;
+    }
+
+    .translate-b:hover {
+        border: none;
+        background-color: #FFD60D;
+        border: 1px solid #FFD60D;
+        padding: 9px 24px;
+        border-radius: 24px;
+        transition: 300ms;
+
+        font-family: dejanire-text, sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.5rem;
+        color: #ffffff;
+    }
+}
