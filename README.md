@@ -1,4 +1,3 @@
-# Studio Ping Pong Projects
 
 This repository showcases creative coded work developed for Studio Ping Pong. Click on a project name below to view it live.
 
